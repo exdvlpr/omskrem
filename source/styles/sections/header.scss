@@ -1,0 +1,68 @@
+.header{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  &__container{
+padding: 0 3px 0 3px;
+    display: flex;
+    justify-content: space-between;
+    //align-items: flex-end;
+    padding-bottom: 4px;
+    border-bottom: 1px solid darkgray;
+  }
+}
+
+.logo{
+  display: flex;
+  align-items: flex-end;
+  &__picture{
+
+  }
+  &__text{
+
+    &__top{
+
+    }
+    &__bottom{
+      font-family: $ff-main-bold;
+      padding-bottom: 2px;
+
+    }
+    &__bottom:first-letter{
+      color: $cb;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: space-between;
+  padding-bottom: 0;
+
+}
+.contact{
+  color: #000;
+  text-decoration: none;
+
+  &:hover{
+    color: lighten(#424242, 20%);
+  }
+  &:first-child{
+
+  }
+  &__icon{
+    padding-right: 6px;
+    color: $cb;
+  }
+  &__text-bold{
+    font-family: $ff-main-bold;
+    font-size: 1.3rem;
+    color: $cb;
+    padding-left: 3px;
+  }
+}
+.fa-mobile{
+  font-size: 1.5rem;
+}
