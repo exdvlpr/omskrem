@@ -1,0 +1,37 @@
+{
+  "name": "omskrem",
+  "version": "1.0.0",
+  "description": "my site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exdvlpr/omskrem.git"
+  },
+  "author": "Dyubov vlad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exdvlpr/omskrem/issues"
+  },
+  "homepage": "https://github.com/exdvlpr/omskrem#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.5.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "normalize.scss": "^0.1.0"
+  }
+}
