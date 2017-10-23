@@ -26,7 +26,10 @@ gulp.task('server', function() {
 /*-------js--------------*/
 gulp.task('js', function () {
     return gulp.src([
+        'source/js/libs/jquery-3.2.1.min.js',
+        'source/js/stick.js',
         'source/js/main.js'
+
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
