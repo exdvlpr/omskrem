@@ -10,6 +10,7 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const gcmq = require('gulp-group-css-media-queries');
 
 
 
@@ -55,6 +56,7 @@ gulp.task('templates:compile', function buildHTML() {
 gulp.task('styles:compile', function () {
     return gulp.src('source/styles/main.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gcmq())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
