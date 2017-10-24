@@ -1,4 +1,4 @@
-
+//menu
 .menu{
   text-align: center;
   background: $cg;
@@ -9,6 +9,7 @@
   &__toggle{
     display: none;
     cursor: pointer;
+    padding: 5px;
   }
   &__list{
     display: flex;
@@ -16,11 +17,14 @@
     padding: 0 0;
     margin: 0 auto;
     line-height: 1.3rem;
+    text-align: center;
   }
   &__item {
     padding: 5px 15px;
     border-right: 1px solid white;
     border-left: 1px solid white;
+    border-top: 3px solid $cg;
+    @include trans-it();
     width: 100%;
     a {
     text-decoration: none;
@@ -28,14 +32,19 @@
     font-family: $ff-main;
   }
     &:hover{
-      background: $cb;
+      border-top: 3px solid $cb;
+      background: lighten($cb, 60%);
+      a {
+        color: lighten($cb, 5%)
+      }
     }
   }
 }
+//small display
 
-
-@media (max-width: $mw) {
+@media screen and (max-width: $mw) {
 .menu {
+
   &__toggle {
     display: block;
 
@@ -44,14 +53,14 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    background: #eeeeee;
+    background: #fff;
     width: 100%;
+
   }
 }
 }
+//shadow for sticky menu
 nav{
-
-
   transition: box-shadow 400ms;
 }
 .sticky{
@@ -61,4 +70,60 @@ nav{
   width: 100%;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+//vertical menu list
+.menu__item{
+  position: relative;
+  display: block;
+
+  }
+.menu__item__list{
+  display: none;
+  position:absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  a {
+    color: #000;
+  }
+  &__item{
+    padding: 5px 0;
+    text-align: center;
+    border-top: 3px solid #fff;
+    @include trans-it();
+
+  }
+
+}
+.menu__item:hover  .menu__item__list{
+    display: block;
+ // flex-direction: column;
+  a {
+    color: #000;
+  }
+  padding: 5px 0 5px 0;
+  &__item{
+    background: $cg;
+    @include trans-it();
+    color: #000;
+    //menyal na rovnuyu liniyu
+
+  }
+  &__item:hover {
+    background: lighten($cg, 50%);
+
+
+  }
+}
+@media (max-width: $mw) {
+  .menu__item__list {
+    top: 0;
+    left: 0;
+    &__item {
+      //menyal na rovnuyu liniyu
+      text-align: left;
+      padding-left: 50px;
+    }
+  }
 }
