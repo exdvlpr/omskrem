@@ -3,12 +3,15 @@
   display: flex;
   justify-content: space-between;
   font-family: $ff-main-bold;
+  margin-bottom: 5px;
 
 }
 .logo{
-  padding-left: 10px;
+  padding: 0 30px;
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
+  color: $col-text;
   &__picture{
     display: flex;
     align-items: flex-end;
@@ -29,13 +32,24 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-right: 10px;
+  padding: 0 30px;
   &__link{
     text-decoration: none;
     color: $col-text;
+    margin-top: 5px;
   }
   &__icon{
     margin: 0 5px;
     color: $col-main
+  }
+}
+
+//hide contacts on small screen
+@media screen and (max-width: $mw) {
+  .contact{
+    display: none;
+  }
+  .header__container{
+    justify-content: center;
   }
 }
