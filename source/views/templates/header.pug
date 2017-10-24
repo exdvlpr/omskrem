@@ -1,17 +1,15 @@
 header.header
-    .container
-        .header__container
-            .logo
-                .logo__picture
-                    img(src="images/logo.png" alt="logo")
-                .logo__text
-                    .logo__text__top ремонт квартир
-                    .logo__text__bottom Мегаполис
-            .contacts
-                 a.contact(href="tel:+79293608630")
-                     i.fa.fa-mobile.contact__icon(aria-hidden="true")
-                     span.contact__text +7(929)
-                            span.contact__text-bold 360 86 30
-                 a.contact(href="mailto:ork@yandex.ru")
-                     i.fa.fa-envelope.contact__icon.contact__icon--emailcontact__icon(aria-hidden="true")
-                     span.contact__text ork@yandex.ru
+    .container.header__container
+        .logo
+            .logo__picture
+                img(src="images/logo.png" alt="logo")
+            .logo__text
+                .logo__text_top ремонт квартир
+                .logo__text_bottom Мегаполис
+        .contact
+             a.contact__link(href="tel:+79293608630")
+                 i.fa.fa-mobile.contact__icon(aria-hidden="true")
+                 span.contact__text +7(929) 360 86 30
+             a.contact__link(href="mailto:ork@yandex.ru")
+                 i.fa.fa-envelope.contact__icon(aria-hidden="true")
+                 span.contact__text ork@yandex.ru

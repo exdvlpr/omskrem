@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const gcmq = require('gulp-group-css-media-queries');
+const smartgrid = require('smart-grid');
 
 
 
@@ -32,7 +33,7 @@ gulp.task('server', function() {
 /*-------js--------------*/
 gulp.task('js', function () {
     return gulp.src([
-        'source/js/stick.js',
+        'source/js/menu.js',
         'source/js/main.js'
 
     ])

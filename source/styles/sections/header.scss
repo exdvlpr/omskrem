@@ -1,78 +1,41 @@
-.header{
 
-  &__container{
-padding: 0 5px 0 5px;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 4px;
-  }
+.header__container{
+  display: flex;
+  justify-content: space-between;
+  font-family: $ff-main-bold;
+
 }
-
 .logo{
+  padding-left: 10px;
   display: flex;
   align-items: flex-end;
   &__picture{
-
+    display: flex;
+    align-items: flex-end;
   }
   &__text{
 
-    &__top{
-
-    }
-    &__bottom{
-      font-family: $ff-main-bold;
-      padding-bottom: 2px;
-
-    }
-    &__bottom:first-letter{
-      color: $cb;
-      font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &_bottom{
+      &:first-letter{
+        color: $col-main;
+      }
     }
   }
-}
-
-.contacts{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  //align-content: flex-end;
-  flex-wrap: wrap;
-  //padding-top: 7px;
-
 }
 .contact{
-  color: #000;
-  text-decoration: none;
-  padding-left: 20px;
-
-
-  &:hover{
-    color: lighten(#424242, 20%);
-  }
-  &:first-child{
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 10px;
+  &__link{
+    text-decoration: none;
+    color: $col-text;
   }
   &__icon{
-    padding-right: 6px;
-    color: $cb;
-  }
-  &__text-bold{
-    font-family: $ff-main-bold;
-    font-size: 1.3rem;
-    color: $cb;
-    padding-left: 3px;
-  }
-}
-.fa-mobile{
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: $mw) {
-  .contacts{
-    display: none;
-  }
-  .header__container{
-    justify-content: center;
+    margin: 0 5px;
+    color: $col-main
   }
 }

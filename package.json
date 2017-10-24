@@ -1,5 +1,5 @@
 {
-  "name": "omskrem",
+  "name": "omBem",
   "version": "1.0.0",
   "description": "my site",
   "main": "index.js",
@@ -30,7 +30,8 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp.spritesmith": "^6.5.1",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "smart-grid": "^2.0.0"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
