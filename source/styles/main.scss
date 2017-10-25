@@ -4,8 +4,10 @@
 @import "global/vars";
 @import "global/mixins";
 @import "global/fonts";
-
+@import "global/button";
+@import "global/form";
 @import "global/base";
 
 @import "sections/header";
 @import "sections/nav";
+@import "sections/hero";
