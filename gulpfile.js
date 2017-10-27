@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
-const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
@@ -11,12 +10,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const gcmq = require('gulp-group-css-media-queries');
-const smartgrid = require('smart-grid');
-
-
-
-/*------------images----*/
-
 
 
 /*-----Server----*/
@@ -33,7 +26,7 @@ gulp.task('server', function() {
 /*-------js--------------*/
 gulp.task('js', function () {
     return gulp.src([
-        'source/js/menu.js',
+        'source/js/libs/material.min.js',
         'source/js/main.js'
 
     ])
@@ -66,18 +59,7 @@ gulp.task('styles:compile', function () {
         .pipe(gulp.dest('build/css'));
 });
 
-/*------------sprite----------------*/
 
-gulp.task('sprite', function (cb) {
-    const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
-        imgName: 'sprite.png',
-        imgPath: '../images/sprite.png',
-        cssName: 'sprite.scss'
-    }));
-    spriteData.img.pipe(gulp.dest('build/images/'));
-    spriteData.css.pipe(gulp.dest('source/styles/global/'));
-    cb();
-});
 /*------------delete----------------*/
 gulp.task('clean', function del(cb) {
     return rimraf('build', cb);
@@ -108,7 +90,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('templates:compile', 'styles:compile', 'js', 'sprite', 'copy'),
+    gulp.parallel('templates:compile', 'styles:compile', 'js', 'copy'),
     gulp.parallel('watch', 'server')
     )
 );

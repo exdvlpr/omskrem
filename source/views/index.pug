@@ -1,15 +1,20 @@
 doctype html
 html(lang='ru')
-    head
-        meta(charset='UTF-8')
-        meta(http-equiv='X-UA-Compatible', content="IE=edge")
-        meta(name='viewport' content='width=device-width, initial-scale=1')
-        link(rel="stylesheet" href="css/main.min.css")
-        title Ремонт квартир в омске
-        meta(name='description' content='')
-    body
-        include templates/header
-        include templates/nav
-        include templates/hero
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-        script(src='js/main.min.js')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+		link(rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-orange.min.css")
+		link(rel="stylesheet" href="css/main.min.css")
+		title Ремонт квартир в омске
+		meta(name='description' content='')
+	body
+		.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+			include templates/head
+			main.mdl-layout__content
+				.page-content
+					include templates/hero
+					include templates/advantages
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src='js/main.min.js')

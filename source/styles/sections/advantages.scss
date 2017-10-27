@@ -1,0 +1,25 @@
+.icon__container{
+	color: $col-text-icons;
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	background-color: $col-divided;
+	//box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	
+}
+.icon i{
+	font-size: 3rem;
+	margin-bottom: 10px;
+	font-weight: 100;
+}
+.icon{
+	text-align: center;
+	font-size: 1.2rem;
+	max-width: 181px;
+	margin: 0 50px;
+}
+@media screen and (max-width: 960px) {
+	.icon__container{
+		display: none;
+	}
+}

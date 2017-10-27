@@ -1,14 +1,13 @@
-form.form
-    .form__text Оставьте заявку, и мы ответим на ваши вопросы
-    .form__fields
-        .group
-            input(type="text" name="name" required)
-            span.highlight
-            span.bar
-            label Ваше имя:
-        .group
-            input(type="tel" name="phone" required)
-            span.highlight
-            span.bar
-            label Ваш телефон:
-        button(type="submit").button Получить консультацию
+form.form(action="#")
+	.form__text Оставьте заявку, и мы ответим на ваши вопросы
+	.form__fields
+		.form__group
+			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+				input.mdl-textfield__input(type="text" id="name" name="name" required)
+				label.mdl-textfield__label(for="name") Ваше имя:
+		.form__group
+			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+				input.mdl-textfield__input(type="tel" id="phone" name="phone" required)
+				label.mdl-textfield__label(for="phone") Ваш телефон:
+		button(type="submit").mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Получить консультацию
+		span.form__conf Ваши данные не будут переданы третьим лицам!

@@ -1,55 +1,58 @@
-
-.header__container{
-  display: flex;
-  justify-content: space-between;
-  font-family: $ff-main-bold;
-  margin-bottom: 5px;
-
+.mdl-layout__header .mdl-layout__header-row{
+  background-color: $col-text-icons;
+  color: $col-main;
 }
-.logo{
-  padding: 0 30px;
-  display: flex;
-  align-items: flex-end;
-  text-decoration: none;
-  color: $col-text;
-  &__picture{
-    display: flex;
-    align-items: flex-end;
-  }
-  &__text{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    &_bottom{
-      &:first-letter{
-        color: $col-main;
-      }
-    }
-  }
-}
-.contact{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 30px;
-  &__link{
-    text-decoration: none;
+.mdl {
+  
+  &-layout__header-row &-navigation__link {
+    border-bottom: 4px solid transparent;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     color: $col-text;
-    margin-top: 5px;
+    font-weight: 700;
+
+    &:hover {
+      border-bottom: 4px solid $col-main;
+    }
+
   }
-  &__icon{
-    margin: 0 5px;
-    color: $col-main
+  &-layout__title {
+    text-align: center;
+    
+    padding: 0 5px 0 10px;
+    &-bottom{
+      font-size: 1.4rem;
+      padding-top: 3px;
+      color: $col-text;
+    }
+    &-top{
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-weight: 900;
+    }
+ 
   }
 }
-
-//hide contacts on small screen
-@media screen and (max-width: $mw) {
-  .contact{
-    display: none;
+.mdl-layout__drawer .mdl-navigation  .mdl-navigation__link {
+  font-size: 1.2rem;
+  padding: 5px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover{
+    color: $col-main;
   }
-  .header__container{
-    justify-content: center;
+  &-2nd {
+    padding-left: 35px;
+    font-size: 1.1rem;
+    text-transform: none;
   }
+}
+.mdl-layout__drawer .mdl-layout__title{
+  background-color: $col-main;
+  color: #eeeeee;
+  padding: 0;
+}
+.mdl-layout__header .mdl-layout__drawer-button{
+  background-color: $col-text-icons;
+  color: $col-text;
 }
