@@ -1,0 +1,49 @@
+.cell{
+	background-color: $col-text-icons;
+
+}
+.work{
+	background-color: $col-bg;
+
+	&__top{
+		font-size: 2rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 2.5rem;
+		padding: 5px 15px;
+		margin: 20px 5px;
+	}
+
+	&__bottom{
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		padding: 20px 20px;
+		border-left: 5px solid $col-main-light;
+	}
+	&__no-bg{
+		background-color: $col-bg;
+	}
+
+}
+.number{
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: $col-main;
+	background-image: none;
+	background-origin: padding-box;
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: auto auto;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	color: #fff;
+	display: inline-block;
+	font-size: 22px;
+	height: 37px;
+	line-height: 37px;
+	margin-right: 20px;
+	text-align: center;
+	width: 37px;
+}

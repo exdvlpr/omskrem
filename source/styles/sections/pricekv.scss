@@ -1,0 +1,46 @@
+.pricekv{
+	//background-color: $col-bg;
+
+}
+.price-tb{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	&__head{
+		background-color: $col-main-dark;
+		color: $col-text-icons;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 2rem;
+		line-height: 4rem;
+	}
+	&__price{
+		background-color: $col-main-light;
+		color: $col-text;
+		text-align: center;
+		font-size: 2rem;
+		line-height: 4rem;
+		font-weight: 700;
+	}
+	&__text{
+		font-size: 1.2rem;
+		&-row{
+			padding: 15px 20px;
+			background-color: $col-text-icons;
+		}
+		&-row:nth-child(2n){
+			background-color: $col-bg;
+		}
+	}
+	&__button{
+		padding: 5px 1px;
+		background-color: $col-main-dark;
+		color: #ff5722;
+		display: flex;
+		justify-content: space-around;
+		.mdl-button{
+			&:hover{
+				color: lighten($col-btn, 90%)
+			}
+		}
+	}
+}

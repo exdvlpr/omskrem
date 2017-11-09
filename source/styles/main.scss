@@ -1,12 +1,19 @@
 @import "../../node_modules/font-awesome/scss/font-awesome.scss";
 @import "../../node_modules/normalize.scss/normalize.scss";
 
-//@import "global/fonts";
+@import "global/fonts.scss";
+
+@import "libs/animate";
 @import "global/vars";
 @import "global/mixins";
 @import "global/base";
+@import "libs/dialog-polyfill";
 @import "global/form";
 
 @import "sections/header";
 @import "sections/hero";
 @import "sections/advantages";
+@import "sections/vidy";
+@import "sections/howWework";
+@import "sections/pricekv";
+@import "sections/questions";

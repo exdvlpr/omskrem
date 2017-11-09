@@ -10,6 +10,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const gcmq = require('gulp-group-css-media-queries');
+const babel = require('gulp-babel');
 
 
 /*-----Server----*/
@@ -26,13 +27,18 @@ gulp.task('server', function() {
 /*-------js--------------*/
 gulp.task('js', function () {
     return gulp.src([
-        'source/js/libs/material.min.js',
+			'source/js/libs/dialog-polyfill.js',
+      'source/js/libs/material.min.js',
+			'source/js/libs/dialog.js',
         'source/js/main.js'
 
     ])
         .pipe(sourcemaps.init())
+				.pipe(babel({
+					presets: ['env']
+				}))
         .pipe(concat('main.min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/js'));
 

@@ -1,0 +1,14 @@
+dialog.mdl-dialog
+	.mdl-dialog__title.dialog__title Оставьте заявку
+	.mdl-dialog__content
+		form.sub
+			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+				input.mdl-textfield__input(type="text" id="name1" name="name" required)
+				label.mdl-textfield__label(for="name1") Ваше имя:
+			.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+				input.mdl-textfield__input(type="tel" id="phone1" name="phone" required)
+				label.mdl-textfield__label(for="phone1") Ваш телефон:
+			span.dialog__conf Ваши данные не будут переданы третьим лицам!
+			.mdl-dialog__actions.mdl-dialog__actions--full-width
+				button(type="submit").mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect.mdl-button--raised Получить консультацию
+				button(type="button").mdl-button.mdl-js-button.mdl-js-ripple-effect.close Отмена
